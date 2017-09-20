@@ -1,0 +1,31 @@
+import java.util.Scanner;
+import java.lang.*;
+public class Program_2_8{
+	public static void main(String[] args) {
+		int loopVal = 42;
+
+		do {
+		Scanner reader = new Scanner (System.in);
+		String Name;
+		double FinalNum, x1, y1, x2, y2,N1, N2, D1;
+		int dyw;
+		System.out.println("hello I am freddy your distance formula calculator, what is your name");
+		Name = reader.nextLine();
+		System.out.println("what is the first x cordinate");
+		x1 = reader.nextDouble();
+		System.out.println("what is the first y cordinate");
+		y1 = reader.nextDouble();
+		System.out.println("what is the second x cordinate");
+		x2 = reader.nextDouble();
+		System.out.println("what is the second y cordinate");
+		y2 = reader.nextDouble();
+		N1=(x2-x1);
+		N2=(y2-y1);
+		D1=((N1*N1)+(N2*N2));
+		FinalNum=(Math.sqrt(D1));
+		System.out.println("ok "+Name+" the distence is "+FinalNum);
+		}
+		while ( loopVal == 42 );
+	}
+
+}

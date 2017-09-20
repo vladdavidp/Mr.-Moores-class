@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Program_2_3 {
+	public static void main(String[] args) {
+		Scanner reader = new Scanner (System.in);
+		float val1, val2, sum, dif, pro;
+		String str, name;
+		System.out.println("what is your name? ");
+		name = reader.nextLine();
+		System.out.println("hello " + name + " i am lolbot and my job is to find the sum difrence and product of 2 numbers");
+		System.out.println("enter your first number");
+		val1 = reader.nextInt();
+		System.out.println("enter your second number");
+		val2 = reader.nextInt();
+		sum=val1+val2 ;
+		dif=val1-val2 ;
+		pro=val1*val2 ;
+		System.out.println("the sum of the values you enterd is " + sum);
+		System.out.println("the difrence of the values you enterd is " + dif);
+		System.out.println("the product of the values you enterd is " + pro);
+		
+	}
+
+}
+

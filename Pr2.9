@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Program_2_9{
+	public static void main(String[] args) {
+		int loopVal = 0;
+
+		do {
+		Scanner reader = new Scanner (System.in);
+		String Name;
+		double radius, PI, SA, FN, SA2, FN2, aah;
+		System.out.println("what is your name? ");
+		Name = reader.nextLine();
+		System.out.println("Ok "+Name+" i want you to think of a sphear and more importantly i want you to think of the radius of the spheer? ");
+		radius = reader.nextDouble();
+		PI = (3.14) ;
+		FN=(radius*radius);
+		SA = ((4*PI)* (FN));
+		FN2=(radius*radius*radius);
+		SA2 = ((4*PI)* (FN2));
+		aah = (SA2/3);
+		System.out.println("the surfase area of the sphear is "+ SA);
+		System.out.println("the volume of the sphear is "+ aah);
+		}
+		while ( loopVal < 42 );
+	}
+
+}

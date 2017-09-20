@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Program_2_6{
+	public static void main(String[] args) {
+		int loopVal = 0;
+
+		do {
+		Scanner reader = new Scanner (System.in);
+		double hou, min, sec, time;
+		System.out.println("how many hours ");
+		hou = reader.nextDouble();
+		System.out.println("how many minits ");
+		min = reader.nextDouble();
+		System.out.println("how many seconds ");
+		sec = reader.nextDouble();
+		time = ((((hou*60)+min)*60)+ sec) ;
+		System.out.println(time + " seconds");
+		}
+		while ( loopVal < 42 );
+	}
+
+}
