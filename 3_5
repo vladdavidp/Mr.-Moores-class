@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Program_3_5 {
+	public static void main(String[] args) {
+		Scanner Reader = new Scanner (System.in);
+		String usrinput , Name;
+		System.out.println("what is your name? ");
+		Name=Reader.nextLine();
+		System.out.println("Now then "+ Name + " tell me how you are feeling and I shall break it up for you.");
+		usrinput=Reader.nextLine();
+		for(int x = 0; x<usrinput.length(); x++){
+			System.out.println(usrinput.charAt(x));
+		}
+	}
+
+}
+

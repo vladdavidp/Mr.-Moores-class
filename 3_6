@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Program3_6 {
+	public static void main(String[] args) {
+		Scanner Reader = new Scanner (System.in);
+		String Name, usrinput;
+		int usrinput2, lst;
+		System.out.println("what is your name? ");
+		Name=Reader.nextLine();
+		System.out.println("Now then "+ Name + " type a intiger number");
+		usrinput=Reader.nextLine();
+		System.out.println(usrinput.length ());
+		for(int x = 0; x<usrinput.length(); x++){
+			System.out.println(usrinput.charAt(x));
+		}
+	}
+
+}
+
