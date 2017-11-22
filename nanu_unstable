@@ -1,0 +1,80 @@
+import java.awt.BorderLayout;
+import java.awt.Color;
+import javax.swing.JOptionPane;
+import java.awt.Component;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Random;
+import java.util.Scanner;
+import java.awt.TextArea;
+import java.awt.TextComponent;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+public class nanu_unstable extends JFrame implements ActionListener{
+	private static final long serialVersionUID = 1L;
+	public static  String p4="";
+    public static String p5="";
+    Component c = new TextArea("");
+    public static void main(String[] args) {
+        new nanu_unstable().setVisible(true);
+    }
+    public nanu_unstable() {
+        super("condor0010's window");
+        setSize(500,350);
+        setResizable(false);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLayout(new FlowLayout());
+        Random rand = new Random(); 
+        int valvea = rand.nextInt(256), valveb = rand.nextInt(256),valvec = rand.nextInt(256);
+        getContentPane().setBackground(new Color(valvea,valveb,valvec));
+        add(c, BorderLayout.NORTH);
+        JButton button =new JButton("save");
+        JButton button2 =new JButton("open");
+        add(button);//create button
+        add(button2);
+        button.addActionListener(this);
+        button2.addActionListener(this);
+        p5+=c.getToolkit();
+    }
+    @Override
+    public void actionPerformed(ActionEvent louie) {
+    	String name =louie.getActionCommand();
+    	if(name.equals("save")) {
+
+        	
+        	String nme= JOptionPane.showInputDialog("file location and name be spesific"); 
+            File file = new File(nme);
+            p5 = ((TextComponent) c).getText();
+            PrintWriter printWriter = null;
+            try{
+                printWriter = new PrintWriter(file);
+                printWriter.println(p5);
+            }catch (FileNotFoundException arg0)
+            {
+                arg0.printStackTrace();
+            }finally
+            {
+            	if ( printWriter != null ) {
+                    printWriter.close();
+                }
+            }
+    	}else if(name.equals("open")) {
+        	String nme= JOptionPane.showInputDialog("type the naem and location of the file you would like to open"); 
+            File file = new File(nme);
+            try {
+                File in = new File(nme);
+                Scanner scanner = new Scanner(file);
+                while (scanner.hasNextLine()) {
+                    System.out.println(scanner.nextLine());
+                }
+                scanner.close();
+              } catch (FileNotFoundException e) {
+                e.printStackTrace();
+              }
+            }
+    	}
+    }
